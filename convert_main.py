@@ -1,4 +1,6 @@
 
+#来自 如何使用Python处理HDF格式数据 https://cloud.tencent.com/developer/article/1471183
+
 import pandas as pd
 import numpy as np
 
@@ -33,14 +35,14 @@ LON, LAT= np.meshgrid(lon[:], lat[:])
 
 con = ax.contourf(LON, LAT, flash[:, :, 150], cmap=cmaps, norm=norm, levels=levels, extend='max')
 
-cb = fig.colorbar(con, shrink=0.75, pad=0.02)
-cb.cmap.set_over('#000000')
-cb.ax.tick_params(direction='in', length=5)
+#cb = fig.colorbar(con, shrink=0.75, pad=0.02)
+#cb.cmap.set_over('#000000')
+#cb.ax.tick_params(direction='in', length=5)
 
 ax.coastlines()
 
-ax.set_xticks(np.linspace(-180, 180, 5), crs=proj)
-ax.set_yticks(np.linspace(-90, 90, 5), crs=proj)
+#ax.set_xticks(np.linspace(-180, 180, 5), crs=proj)
+#ax.set_yticks(np.linspace(-90, 90, 5), crs=proj)
 
 lon_formatter= LongitudeFormatter(zero_direction_label=True)
 lat_formatter= LatitudeFormatter()
